@@ -18,11 +18,11 @@ body, html {
     
     /* Basado exactamente en la paleta verde salvia suave y nubes de tu referencia */
     background: linear-gradient(135deg, 
-        #b2beaf 0%,   /* Verde Sage Pastel */
-        #c3cebf 25%,  /* Oliva Suave */
-        #a3b19b 50%,  /* Salvia Apagado Mate */
-        #c3cebf 75%,  /* Oliva Suave */
-        #b2beaf 100%  /* Verde Sage Pastel */
+        #b2beaf 0%,   
+        #c3cebf 25%,  
+        #a3b19b 50%,  
+        #c3cebf 75%,  
+        #b2beaf 100%  
     );
     background-size: 400% 400%;
     
@@ -45,8 +45,7 @@ body, html {
     position: absolute;
     width: 160%;
     height: 160%;
-    /* Luz mágica dorada/crema ultra suave para emular los destellos de la mariposa y corazones */
-    background: radial-gradient(circle at 50% 50%, rgba(24cfebd, 237, 212, 0.18) 0%, rgba(244, 241, 234, 0.04) 45%, transparent 85%);
+    background: radial-gradient(circle at 50% 50%, rgba(251, 247, 235, 0.18) 0%, rgba(244, 241, 234, 0.04) 45%, transparent 85%);
     z-index: 2;
     pointer-events: none;
     
@@ -80,7 +79,7 @@ body, html {
     align-items: center;
 }
 
-/* GABY CON EL NEÓN CHAMPAÑA CÁLIDO EXACTO DE TU FOTO */
+/* GABY CON EL EFECTO AMARILLO NEÓN CHAMPAÑA DE LA FOTO */
 .texto-caligrafico-glow {
     font-family: 'Great Vibes', cursive, serif;
     font-size: 13rem;
@@ -90,53 +89,56 @@ body, html {
     line-height: 1.1;
     user-select: none;
     display: block;
-    color: #ffffff;
     
-    /* El neón blanco ahora tiene subtonos crema/champaña para fundirse mágico con el verde */
+    /* Letra base color crema ultra claro */
+    color: #fffdf9;
+    
+    /* CAPAS DE NEÓN: Combinación exacta de amarillo champaña y oro pastel encendido */
     text-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.95), 
-        0 0 22px rgba(251, 247, 235, 0.6), 
-        0 0 38px rgba(243, 235, 215, 0.35);
+        0 0 10px #fff7db, 
+        0 0 20px rgba(253, 240, 195, 0.9), 
+        0 0 35px rgba(246, 227, 169, 0.6),
+        0 0 50px rgba(235, 212, 142, 0.3);
 }
 
-/* DIVISOR COQUETO CON CORAZÓN */
+/* DIVISOR COQUETO CON CORAZÓN AMARILLO NEÓN */
 .xat-divider {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: -15px;
     margin-bottom: 25px;
-    opacity: 0.75;
+    opacity: 0.8;
 }
 
 .xat-divider::before, .xat-divider::after {
     content: "";
     width: 90px;
     height: 1.5px;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6) 50%, transparent);
+    background: linear-gradient(to right, transparent, rgba(255, 251, 235, 0.6) 50%, transparent);
 }
 
 .xat-heart {
     width: 6px;
     height: 6px;
-    background-color: #ffffff;
+    background-color: #fffdf9;
     position: relative;
     transform: rotate(45deg);
     margin: 0 12px;
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 8px rgba(253, 240, 195, 0.9);
 }
 .xat-heart::before, .xat-heart::after {
     content: "";
     width: 6px;
     height: 6px;
-    background-color: #ffffff;
+    background-color: #fffdf9;
     border-radius: 50%;
     position: absolute;
 }
 .xat-heart::before { top: -3px; left: 0; }
 .xat-heart::after { top: 0; left: -3px; }
 
-/* REPRODUCTOR ESTILO CRISTAL SEGURO EN ARMONÍA VERDE */
+/* REPRODUCTOR ESTILO CRISTAL */
 .reproductor-lindo {
     background: rgba(255, 255, 255, 0.35);
     border: 1px solid rgba(255, 255, 255, 0.55);
@@ -172,7 +174,7 @@ body, html {
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
-/* SISTEMA ANIMADO: PÉTALOS INTEGRADOS AL PAISAJE VERDE SALVIA */
+/* SISTEMA ANIMADO: PÉTALOS INTEGRADOS */
 .lluvia-petalos {
     position: absolute;
     width: 100%;
@@ -190,7 +192,6 @@ body, html {
     top: -10%;
     animation: caerPetalo 15s linear infinite;
     
-    /* Combinación sintonizada: Blanco Marfil a un sutil y finísimo Verde Hada claro */
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, #d4ded0 100%);
     box-shadow: inset 1px 1px 2px rgba(255,255,255,0.7), 0 2px 4px rgba(0, 0, 0, 0.01);
 }
