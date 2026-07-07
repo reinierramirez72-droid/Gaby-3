@@ -8,7 +8,7 @@ body, html {
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* CONTENEDOR PRINCIPAL: COLOR DE TU IMAGEN CON MOVIMIENTO ONDEANTE SUAVE */
+/* CONTENEDOR PRINCIPAL: MORADO LAVANDA PASTEL ONDEANTE */
 .xat-space-escenario {
     position: fixed;
     top: 0;
@@ -16,13 +16,13 @@ body, html {
     width: 100%;
     height: 100%;
     
-    /* Paleta basada exactamente en el fondo malva/rosa viejo de tu captura */
+    /* Nueva paleta: Morados pastel, lilas y lavandas súper limpios */
     background: linear-gradient(135deg, 
-        #d19db4 0%,   
-        #e2b3c7 25%,  
-        #ca90aa 50%,  
-        #e2b3c7 75%,  
-        #d19db4 100%  
+        #e0ccf8 0%,   /* Lavanda Pastel */
+        #f0e5fc 25%,  /* Lila Soft */
+        #caa6f7 50%,  /* Morado Orquídea Pastel */
+        #f0e5fc 75%,  /* Lila Soft */
+        #e0ccf8 100%  /* Lavanda Pastel */
     );
     background-size: 400% 400%;
     
@@ -37,6 +37,24 @@ body, html {
         xatFadeInSpace 2.5s ease-out forwards,
         xatPurpleWave 14s ease-in-out infinite;
     opacity: 0;
+}
+
+/* EFECTO RECOMENDADO: AURORA BOREAL MÍSTICA EN MOVIMIENTO */
+.xat-space-escenario::before {
+    content: "";
+    position: absolute;
+    width: 160%;
+    height: 160%;
+    /* Halo de luz translúcido que genera reflejos mágicos sobre el morado pastel */
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(224, 204, 248, 0.1) 40%, transparent 70%);
+    z-index: 2;
+    pointer-events: none;
+    animation: xatAuroraGlow 20s ease-in-out infinite alternate;
+}
+
+@keyframes xatAuroraGlow {
+    0% { transform: translate(-5%, -5%) rotate(0deg) scale(0.95); opacity: 0.5; }
+    100% { transform: translate(5%, 5%) rotate(15deg) scale(1.1); opacity: 0.9; }
 }
 
 @keyframes xatPurpleWave {
@@ -60,25 +78,22 @@ body, html {
     align-items: center;
 }
 
-/* GABY CON LA TIPOGRAFÍA ELEGANTE DE TU IMAGEN Y NEÓN BLANCO */
+/* GABY CON NEÓN BLANCO ENCIENDIDO */
 .texto-caligrafico-glow {
     font-family: 'Great Vibes', cursive, serif;
-    font-size: 13rem; /* Tamaño grande y limpio */
+    font-size: 13rem;
     font-weight: 400;
     margin: 0;
     padding: 10px 40px;
     line-height: 1.1;
     user-select: none;
     display: block;
-    
-    /* Blanco puro idéntico a tu referencia */
     color: #ffffff;
     
-    /* El efecto exacto de neón blanco encendido que rodea las letras */
     text-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.9), 
+        0 0 12px rgba(255, 255, 255, 0.95), 
         0 0 25px rgba(255, 255, 255, 0.6), 
-        0 0 40px rgba(255, 255, 255, 0.3);
+        0 0 45px rgba(255, 255, 255, 0.35);
 }
 
 /* DIVISOR COQUETO CON CORAZÓN */
@@ -126,7 +141,7 @@ body, html {
     border-radius: 25px;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -154,7 +169,7 @@ body, html {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-/* SISTEMA ANIMADO: LLUVIA DE PÉTALOS AJUSTADA */
+/* SISTEMA ANIMADO: LLUVIA DE PÉTALOS EN COMBINACIÓN DE ALTO NIVEL */
 .lluvia-petalos {
     position: absolute;
     width: 100%;
@@ -168,22 +183,13 @@ body, html {
 .petalo {
     position: absolute;
     border-radius: 0 100% 40% 100%;
-    opacity: 0.75;
+    opacity: 0.8;
     top: -10%;
     animation: caerPetalo 15s linear infinite;
-
-    /* =========================================================================
-       OPCIONES DE PÉTALOS QUE COMBINAN CON EL FONDO (Descomenta la que prefieras)
-       ========================================================================= */
     
-    /* OPCIÓN 1 (Activada): Degradado Orquídea Pastel y Lavanda (Femenino y dulce) */
-    background: linear-gradient(135deg, #f3d4e2, #ca8ca6);
-
-    /* OPCIÓN 2: Blanco Nácar Puro con Transparencia (Estilo pétalos de novia finos)
-    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,235,240,0.6)); */
-
-    /* OPCIÓN 3: Violeta Lila Pastel (Monocromático perfecto con el fondo)
-    background: linear-gradient(135deg, #e9d5ff, #c084fc); */
+    /* Nueva combinación perfecta: Mezcla de Blanco Nácar y Orquídea Suave */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, #e8cbe2 100%);
+    box-shadow: inset 1px 1px 2px rgba(255,255,255,0.8), 0 2px 5px rgba(168, 85, 247, 0.05);
 }
 
 @keyframes caerPetalo {
@@ -192,8 +198,8 @@ body, html {
         transform: translateX(0) rotate(0deg);
         opacity: 0;
     }
-    10% { opacity: 0.8; }
-    90% { opacity: 0.8; }
+    10% { opacity: 0.85; }
+    90% { opacity: 0.85; }
     100% {
         top: 110%;
         transform: translateX(120px) rotate(360deg);
