@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espacio de Gaby</title>
+    <!-- Cargamos las mejores fuentes de Google Fonts incluyendo la elegante cursiva Monsieur La Doulaise -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <!-- Iconos para el reproductor -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Vinculamos tu archivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="xat-space-escenario">
+        
+        <!-- EFECTO EFEMINADO: POLVO DE HADAS MÁGICO TITILANTE -->
+        <div class="xat-fairy-dust"></div>
+
+        <!-- LLUVIA DE PÉTALOS INTEGRADA AL MORADO PASTEL -->
+        <div class="lluvia-petalos">
+            <div class="petalo p1"></div>
+            <div class="petalo p2"></div>
+            <div class="petalo p3"></div>
+            <div class="petalo p4"></div>
+            <div class="petalo p5"></div>
+            <div class="petalo p6"></div>
+            <div class="petalo p7"></div>
+            <div class="petalo p8"></div>
+            <div class="petalo p9"></div>
+            <div class="petalo p10"></div>
+            <div class="petalo p11"></div>
+            <div class="petalo p12"></div>
+        </div>
+
+        <!-- BLOQUE CENTRAL CON NOMBRE EN CURSIVA Y REPRODUCTOR INTEGRADO -->
+        <div class="contenedor-nombre">
+            <!-- Nombre Gaby en cursiva aristocrática con brillo continuo horizontal -->
+            <h1 class="texto-caligrafico-shimmer">Gaby</h1>
+            
+            <div class="xat-divider">
+                <div class="xat-heart"></div>
+            </div>
+            
+            <!-- Reproductor estilo cristal blanco translúcido -->
+            <div class="reproductor-bajo-nombre">
+                <button id="btn-reproductor" class="reproductor-lindo">
+                    <i id="icono-reproductor" class="fas fa-play"></i>
+                    <span id="texto-reproductor">MÚSICA</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- AUDIO NATIVO DESDE TU REPOSITORIO -->
+        <audio id="musica-fondo" src="cancion.mp3" loop></audio>
+
+    </div>
+
+    <script>
+        const musica = document.getElementById('musica-fondo');
+        const boton = document.getElementById('btn-reproductor');
+        const icono = document.getElementById('icono-reproductor');
+
+        function alternarMusica() {
+            if (musica.paused) {
+                musica.play().then(() => {
+                    icono.className = 'fas fa-pause';
+                }).catch(error => console.log("La reproducción automática requiere interacción"));
+            } else {
+                musica.pause();
+                icono.className = 'fas fa-play';
+            }
+        }
+
+        boton.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            alternarMusica();
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            musica.play().then(() => {
+                icono.className = 'fas fa-pause';
+            }).catch(() => {
+                const activarConInteraccion = () => {
+                    musica.play().then(() => {
+                        icono.className = 'fas fa-pause';
+                        document.removeEventListener('click', activarConInteraccion);
+                        document.removeEventListener('touchstart', activarConInteraccion);
+                        document.removeEventListener('keydown', activarConInteraccion);
+                    });
+                };
+                document.addEventListener('click', activarConInteraccion);
+                document.addEventListener('touchstart', activarConInteraccion);
+                document.addEventListener('keydown', activarConInteraccion);
+            });
+        });
+    </script>
+</body>
+</html>
