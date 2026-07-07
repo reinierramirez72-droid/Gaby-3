@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espacio de Gaby</title>
-    <!-- Importamos Great Vibes para el nombre y Montserrat para el botón -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Iconos para el reproductor -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Vinculamos tu archivo CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="xat-space-escenario">
 
-        <!-- LLUVIA DE PÉTALOS MEJORADA -->
+        <div class="xat-polvo-hadas"></div>
+
         <div class="lluvia-petalos">
             <div class="petalo p1"></div>
             <div class="petalo p2"></div>
@@ -33,16 +31,13 @@
             <div class="petalo p12"></div>
         </div>
 
-        <!-- BLOQUE CENTRAL -->
         <div class="contenedor-nombre">
-            <!-- Nombre Gaby con la fuente de la imagen y brillo neón blanco -->
             <h1 class="texto-caligrafico-glow">Gaby</h1>
             
             <div class="xat-divider">
                 <div class="xat-heart"></div>
             </div>
             
-            <!-- Reproductor estilo cristal blanco translúcido -->
             <div class="reproductor-bajo-nombre">
                 <button id="btn-reproductor" class="reproductor-lindo">
                     <i id="icono-reproductor" class="fas fa-play"></i>
@@ -51,7 +46,6 @@
             </div>
         </div>
 
-        <!-- AUDIO NATIVO DESDE TU REPOSITORIO -->
         <audio id="musica-fondo" src="cancion.mp3" loop></audio>
 
     </div>
@@ -65,7 +59,7 @@
             if (musica.paused) {
                 musica.play().then(() => {
                     icono.className = 'fas fa-pause';
-                }).catch(error => console.log("La reproducción automática requiere interacción"));
+                }).catch(error => console.log("Interacción requerida"));
             } else {
                 musica.pause();
                 icono.className = 'fas fa-play';
@@ -85,13 +79,9 @@
                     musica.play().then(() => {
                         icono.className = 'fas fa-pause';
                         document.removeEventListener('click', activarConInteraccion);
-                        document.removeEventListener('touchstart', activarConInteraccion);
-                        document.removeEventListener('keydown', activarConInteraccion);
                     });
                 };
                 document.addEventListener('click', activarConInteraccion);
-                document.addEventListener('touchstart', activarConInteraccion);
-                document.addEventListener('keydown', activarConInteraccion);
             });
         });
     </script>
