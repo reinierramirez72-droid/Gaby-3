@@ -8,7 +8,7 @@ body, html {
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* CONTENEDOR PRINCIPAL: BEIGE PASTEL ULTRA SUAVE ONDEANTE */
+/* CONTENEDOR PRINCIPAL: VERDE SAGE / OLIVA PASTEL ONDEANTE */
 .xat-space-escenario {
     position: fixed;
     top: 0;
@@ -16,13 +16,13 @@ body, html {
     width: 100%;
     height: 100%;
     
-    /* Paleta cálida absorbente de luz: tonos almendra, crema y beige empolvado */
+    /* Basado exactamente en la paleta verde salvia suave y nubes de tu referencia */
     background: linear-gradient(135deg, 
-        #f5ebe0 0%,   /* Crema Suave */
-        #f3e9dc 25%,  /* Beige Almendra */
-        #e3d5ca 50%,  /* Beige Arena Mate */
-        #f3e9dc 75%,  /* Beige Almendra */
-        #f5ebe0 100%  /* Crema Suave */
+        #b2beaf 0%,   /* Verde Sage Pastel */
+        #c3cebf 25%,  /* Oliva Suave */
+        #a3b19b 50%,  /* Salvia Apagado Mate */
+        #c3cebf 75%,  /* Oliva Suave */
+        #b2beaf 100%  /* Verde Sage Pastel */
     );
     background-size: 400% 400%;
     
@@ -35,31 +35,31 @@ body, html {
     
     animation: 
         xatFadeInSpace 2.5s ease-out forwards,
-        xatBeigeWave 14s ease-in-out infinite;
+        xatSageWave 14s ease-in-out infinite;
     opacity: 0;
 }
 
-/* EFECTO AURORA CORE EN TONO CREMA TOSTADO ULTRA SUAVE */
+/* EFECTO AURORA CORE: HALO CHAMPAÑA CÁLIDO TIPO TU IMAGEN */
 .xat-space-escenario::before {
     content: "";
     position: absolute;
     width: 160%;
     height: 160%;
-    /* Halo cálido en tono avellana traslúcido para dar volumen al beige sin encandilar */
-    background: radial-gradient(circle at 50% 50%, rgba(221, 190, 169, 0.15) 0%, rgba(245, 235, 224, 0.03) 45%, transparent 85%);
+    /* Luz mágica dorada/crema ultra suave para emular los destellos de la mariposa y corazones */
+    background: radial-gradient(circle at 50% 50%, rgba(24cfebd, 237, 212, 0.18) 0%, rgba(244, 241, 234, 0.04) 45%, transparent 85%);
     z-index: 2;
     pointer-events: none;
     
-    opacity: 0.6;
+    opacity: 0.65;
     animation: xatAuroraGlow 24s ease-in-out infinite alternate;
 }
 
 @keyframes xatAuroraGlow {
     0% { transform: translate(-5%, -5%) rotate(0deg) scale(0.95); opacity: 0.4; }
-    100% { transform: translate(5%, 5%) rotate(10deg) scale(1.02); opacity: 0.7; }
+    100% { transform: translate(5%, 5%) rotate(8deg) scale(1.02); opacity: 0.75; }
 }
 
-@keyframes xatBeigeWave {
+@keyframes xatSageWave {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
@@ -80,7 +80,7 @@ body, html {
     align-items: center;
 }
 
-/* GABY CON NEÓN EN TONO CREMA MATE */
+/* GABY CON EL NEÓN CHAMPAÑA CÁLIDO EXACTO DE TU FOTO */
 .texto-caligrafico-glow {
     font-family: 'Great Vibes', cursive, serif;
     font-size: 13rem;
@@ -92,11 +92,11 @@ body, html {
     display: block;
     color: #ffffff;
     
-    /* Sombras suavizadas en tonos cálidos para fundirse con la estética beige */
+    /* El neón blanco ahora tiene subtonos crema/champaña para fundirse mágico con el verde */
     text-shadow: 
-        0 0 8px rgba(255, 255, 255, 0.9), 
-        0 0 15px rgba(245, 235, 224, 0.5), 
-        0 0 30px rgba(221, 190, 169, 0.2);
+        0 0 10px rgba(255, 255, 255, 0.95), 
+        0 0 22px rgba(251, 247, 235, 0.6), 
+        0 0 38px rgba(243, 235, 215, 0.35);
 }
 
 /* DIVISOR COQUETO CON CORAZÓN */
@@ -123,7 +123,7 @@ body, html {
     position: relative;
     transform: rotate(45deg);
     margin: 0 12px;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
 }
 .xat-heart::before, .xat-heart::after {
     content: "";
@@ -136,10 +136,10 @@ body, html {
 .xat-heart::before { top: -3px; left: 0; }
 .xat-heart::after { top: 0; left: -3px; }
 
-/* REPRODUCTOR CRISTAL EN TOTAL ARMONÍA CÁLIDA */
+/* REPRODUCTOR ESTILO CRISTAL SEGURO EN ARMONÍA VERDE */
 .reproductor-lindo {
-    background: rgba(255, 255, 255, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.55);
     padding: 10px 24px;
     border-radius: 25px;
     backdrop-filter: blur(12px);
@@ -154,7 +154,7 @@ body, html {
 }
 
 .reproductor-lindo:hover {
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
 }
 
@@ -172,7 +172,7 @@ body, html {
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
-/* SISTEMA ANIMADO: LLUVIA DE PÉTALOS EN TONOS MARFIL Y ROSA VIEJO */
+/* SISTEMA ANIMADO: PÉTALOS INTEGRADOS AL PAISAJE VERDE SALVIA */
 .lluvia-petalos {
     position: absolute;
     width: 100%;
@@ -190,9 +190,9 @@ body, html {
     top: -10%;
     animation: caerPetalo 15s linear infinite;
     
-    /* Combinación ultra fina: Blanco Marfil a Rosa Viejo Soft */
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, #d6ccc2 100%);
-    box-shadow: inset 1px 1px 2px rgba(255,255,255,0.8), 0 2px 5px rgba(0, 0, 0, 0.01);
+    /* Combinación sintonizada: Blanco Marfil a un sutil y finísimo Verde Hada claro */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, #d4ded0 100%);
+    box-shadow: inset 1px 1px 2px rgba(255,255,255,0.7), 0 2px 4px rgba(0, 0, 0, 0.01);
 }
 
 @keyframes caerPetalo {
