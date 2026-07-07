@@ -16,13 +16,13 @@ body, html {
     width: 100%;
     height: 100%;
     
-    /* Nueva paleta: Morados pastel, lilas y lavandas súper limpios */
+    /* Paleta base de morados pastel y lilas muy relajantes para la vista */
     background: linear-gradient(135deg, 
-        #e0ccf8 0%,   /* Lavanda Pastel */
-        #f0e5fc 25%,  /* Lila Soft */
-        #caa6f7 50%,  /* Morado Orquídea Pastel */
-        #f0e5fc 75%,  /* Lila Soft */
-        #e0ccf8 100%  /* Lavanda Pastel */
+        #e0ccf8 0%,   
+        #f0e5fc 25%,  
+        #caa6f7 50%,  
+        #f0e5fc 75%,  
+        #e0ccf8 100%  
     );
     background-size: 400% 400%;
     
@@ -39,22 +39,22 @@ body, html {
     opacity: 0;
 }
 
-/* EFECTO RECOMENDADO: AURORA BOREAL MÍSTICA EN MOVIMIENTO */
+/* EFECTO AURORA MEJORADO: SE ELIMINÓ EL BLANCO BRILLANTE POR TONOS PASTEL ULTRA SUAVES */
 .xat-space-escenario::before {
     content: "";
     position: absolute;
     width: 160%;
     height: 160%;
-    /* Halo de luz translúcido que genera reflejos mágicos sobre el morado pastel */
-    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(224, 204, 248, 0.1) 40%, transparent 70%);
+    /* Aurora mística suavizada con opacidades milimétricas para proteger la vista */
+    background: radial-gradient(circle at 50% 50%, rgba(218, 166, 247, 0.12) 0%, rgba(240, 229, 252, 0.06) 40%, transparent 70%);
     z-index: 2;
     pointer-events: none;
     animation: xatAuroraGlow 20s ease-in-out infinite alternate;
 }
 
 @keyframes xatAuroraGlow {
-    0% { transform: translate(-5%, -5%) rotate(0deg) scale(0.95); opacity: 0.5; }
-    100% { transform: translate(5%, 5%) rotate(15deg) scale(1.1); opacity: 0.9; }
+    0% { transform: translate(-5%, -5%) rotate(0deg) scale(0.95); opacity: 0.6; }
+    100% { transform: translate(5%, 5%) rotate(15deg) scale(1.05); opacity: 0.9; }
 }
 
 @keyframes xatPurpleWave {
@@ -78,7 +78,7 @@ body, html {
     align-items: center;
 }
 
-/* GABY CON NEÓN BLANCO ENCIENDIDO */
+/* GABY CON NEÓN BLANCO EQUILIBRADO */
 .texto-caligrafico-glow {
     font-family: 'Great Vibes', cursive, serif;
     font-size: 13rem;
@@ -90,10 +90,11 @@ body, html {
     display: block;
     color: #ffffff;
     
+    /* El neón ahora es más compacto para que no empañe la visual general */
     text-shadow: 
-        0 0 12px rgba(255, 255, 255, 0.95), 
-        0 0 25px rgba(255, 255, 255, 0.6), 
-        0 0 45px rgba(255, 255, 255, 0.35);
+        0 0 10px rgba(255, 255, 255, 0.9), 
+        0 0 20px rgba(255, 255, 255, 0.5), 
+        0 0 35px rgba(255, 255, 255, 0.2);
 }
 
 /* DIVISOR COQUETO CON CORAZÓN */
@@ -187,7 +188,7 @@ body, html {
     top: -10%;
     animation: caerPetalo 15s linear infinite;
     
-    /* Nueva combinación perfecta: Mezcla de Blanco Nácar y Orquídea Suave */
+    /* Combinación refinada: Mezcla de Blanco Nácar y Orquídea Soft */
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, #e8cbe2 100%);
     box-shadow: inset 1px 1px 2px rgba(255,255,255,0.8), 0 2px 5px rgba(168, 85, 247, 0.05);
 }
