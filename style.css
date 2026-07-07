@@ -39,22 +39,22 @@ body, html {
     opacity: 0;
 }
 
-/* EFECTO AURORA MEJORADO: SE ELIMINÓ EL BLANCO BRILLANTE POR TONOS PASTEL ULTRA SUAVES */
+/* EFECTO DE AURORA EN ROSA EMPOLVADO (DUSTY ROSE) - CERO PRESIÓN VISUAL */
 .xat-space-escenario::before {
     content: "";
     position: absolute;
     width: 160%;
     height: 160%;
-    /* Aurora mística suavizada con opacidades milimétricas para proteger la vista */
-    background: radial-gradient(circle at 50% 50%, rgba(218, 166, 247, 0.12) 0%, rgba(240, 229, 252, 0.06) 40%, transparent 70%);
+    /* Halo calmo en rosa empolvado que elimina los focos blancos molestos */
+    background: radial-gradient(circle at 50% 50%, rgba(210, 160, 180, 0.22) 0%, rgba(224, 204, 248, 0.05) 50%, transparent 75%);
     z-index: 2;
     pointer-events: none;
-    animation: xatAuroraGlow 20s ease-in-out infinite alternate;
+    animation: xatAuroraGlow 22s ease-in-out infinite alternate;
 }
 
 @keyframes xatAuroraGlow {
     0% { transform: translate(-5%, -5%) rotate(0deg) scale(0.95); opacity: 0.6; }
-    100% { transform: translate(5%, 5%) rotate(15deg) scale(1.05); opacity: 0.9; }
+    100% { transform: translate(5%, 5%) rotate(12deg) scale(1.05); opacity: 0.85; }
 }
 
 @keyframes xatPurpleWave {
@@ -78,7 +78,7 @@ body, html {
     align-items: center;
 }
 
-/* GABY CON NEÓN BLANCO EQUILIBRADO */
+/* GABY CON NEÓN SUAVE EN TONO BLANCO NÁCAR / CREMA */
 .texto-caligrafico-glow {
     font-family: 'Great Vibes', cursive, serif;
     font-size: 13rem;
@@ -90,11 +90,11 @@ body, html {
     display: block;
     color: #ffffff;
     
-    /* El neón ahora es más compacto para que no empañe la visual general */
+    /* El neón ahora es color crema/nácar opaco para no encandilar */
     text-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.9), 
-        0 0 20px rgba(255, 255, 255, 0.5), 
-        0 0 35px rgba(255, 255, 255, 0.2);
+        0 0 10px rgba(253, 245, 245, 0.85), 
+        0 0 20px rgba(245, 230, 235, 0.45), 
+        0 0 35px rgba(210, 160, 180, 0.2);
 }
 
 /* DIVISOR COQUETO CON CORAZÓN */
@@ -104,14 +104,14 @@ body, html {
     justify-content: center;
     margin-top: -15px;
     margin-bottom: 25px;
-    opacity: 0.85;
+    opacity: 0.8;
 }
 
 .xat-divider::before, .xat-divider::after {
     content: "";
     width: 90px;
     height: 1.5px;
-    background: linear-gradient(to right, transparent, #ffffff 50%, transparent);
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.7) 50%, transparent);
 }
 
 .xat-heart {
@@ -121,7 +121,7 @@ body, html {
     position: relative;
     transform: rotate(45deg);
     margin: 0 12px;
-    box-shadow: 0 0 8px #ffffff;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
 }
 .xat-heart::before, .xat-heart::after {
     content: "";
@@ -134,15 +134,15 @@ body, html {
 .xat-heart::before { top: -3px; left: 0; }
 .xat-heart::after { top: 0; left: -3px; }
 
-/* REPRODUCTOR CRISTAL BLANCO TRANSLÚCIDO */
+/* REPRODUCTOR CRISTAL BLANCO TRANSLÚCIDO EN ARMONÍA */
 .reproductor-lindo {
-    background: rgba(255, 255, 255, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.55);
     padding: 10px 24px;
     border-radius: 25px;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.01);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -152,14 +152,14 @@ body, html {
 }
 
 .reproductor-lindo:hover {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.55);
     transform: translateY(-2px);
 }
 
 .reproductor-lindo i {
     color: #ffffff;
     font-size: 0.85rem;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
 }
 
 .reproductor-lindo span {
@@ -167,7 +167,7 @@ body, html {
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 1px;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
 }
 
 /* SISTEMA ANIMADO: LLUVIA DE PÉTALOS EN COMBINACIÓN DE ALTO NIVEL */
@@ -188,9 +188,9 @@ body, html {
     top: -10%;
     animation: caerPetalo 15s linear infinite;
     
-    /* Combinación refinada: Mezcla de Blanco Nácar y Orquídea Soft */
+    /* Mezcla de Blanco Nácar y Orquídea Soft para que caigan con suavidad */
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, #e8cbe2 100%);
-    box-shadow: inset 1px 1px 2px rgba(255,255,255,0.8), 0 2px 5px rgba(168, 85, 247, 0.05);
+    box-shadow: inset 1px 1px 2px rgba(255,255,255,0.8), 0 2px 5px rgba(168, 85, 247, 0.03);
 }
 
 @keyframes caerPetalo {
