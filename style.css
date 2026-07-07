@@ -8,7 +8,7 @@ body, html {
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* CONTENEDOR PRINCIPAL: MORADO PASTEL FLUIDO ONDEANTE */
+/* CONTENEDOR PRINCIPAL: COLOR DE TU IMAGEN CON MOVIMIENTO ONDEANTE SUAVE */
 .xat-space-escenario {
     position: fixed;
     top: 0;
@@ -16,15 +16,15 @@ body, html {
     width: 100%;
     height: 100%;
     
-    /* Degradado armonioso de lilas, lavandas y violetas suaves pastel */
+    /* Paleta basada exactamente en el fondo malva/rosa viejo de tu captura */
     background: linear-gradient(135deg, 
-        #f3e8ff 0%,   /* Lavanda Clarísimo */
-        #e9d5ff 25%,  /* Lila Pastel */
-        #d8b4fe 50%,  /* Morado Orquídea Suave */
-        #e9d5ff 75%,  /* Lila Pastel */
-        #f3e8ff 100%  /* Lavanda Clarísimo */
+        #d19db4 0%,   
+        #e2b3c7 25%,  
+        #ca90aa 50%,  
+        #e2b3c7 75%,  
+        #d19db4 100%  
     );
-    background-size: 400% 400%; /* Permite el desplazamiento para simular la bandera */
+    background-size: 400% 400%;
     
     display: flex;
     flex-direction: column;
@@ -33,10 +33,9 @@ body, html {
     overflow: hidden;
     z-index: 1;
     
-    /* Entrada suave + animación de ondulación líquida */
     animation: 
         xatFadeInSpace 2.5s ease-out forwards,
-        xatPurpleWave 12s ease-in-out infinite;
+        xatPurpleWave 14s ease-in-out infinite;
     opacity: 0;
 }
 
@@ -51,27 +50,6 @@ body, html {
     100% { opacity: 1; }
 }
 
-/* EFECTO RECOMENDADO: POLVO DE HADAS MÁGICO TITILANTE */
-.xat-fairy-dust {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(rgba(255, 255, 255, 0.8) 1.5px, transparent 15px),
-        radial-gradient(rgba(216, 180, 254, 0.5) 2px, transparent 25px),
-        radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 30px);
-    background-size: 200px 200px, 320px 320px, 450px 450px;
-    background-position: 0 0, 60px 90px, 130px 240px;
-    z-index: 2;
-    pointer-events: none;
-    animation: xatFairyGlow 4s ease-in-out infinite alternate;
-}
-
-@keyframes xatFairyGlow {
-    0% { opacity: 0.4; transform: scale(0.98); }
-    100% { opacity: 0.95; transform: scale(1.02); }
-}
-
 /* CONTENEDOR CENTRAL */
 .contenedor-nombre {
     position: relative;
@@ -82,39 +60,25 @@ body, html {
     align-items: center;
 }
 
-/* GABY EN CURSIVA ELEGANTE CON BRILLO DE IZQUIERDA A DERECHA */
-.texto-caligrafico-shimmer {
-    font-family: 'Monsieur La Doulaise', cursive, serif;
-    font-size: 13rem; /* Tamaño imponente para letras finas cursivas */
-    font-weight: 500;
+/* GABY CON LA TIPOGRAFÍA ELEGANTE DE TU IMAGEN Y NEÓN BLANCO */
+.texto-caligrafico-glow {
+    font-family: 'Great Vibes', cursive, serif;
+    font-size: 13rem; /* Tamaño grande y limpio */
+    font-weight: 400;
     margin: 0;
     padding: 10px 40px;
     line-height: 1.1;
     user-select: none;
     display: block;
     
-    /* Tono lavanda profundo/blanco base */
+    /* Blanco puro idéntico a tu referencia */
     color: #ffffff;
     
-    /* Máscara metálica para hacer pasar el destello de izquierda a derecha */
-    background: linear-gradient(to right, #b197cc 0%, #b197cc 35%, #ffffff 50%, #b197cc 65%, #b197cc 100%);
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    animation: xatGlowStreak 3.5s linear infinite;
-    
-    /* Aura mística rosa/blanca suave para despegar el nombre del fondo */
-    filter: 
-        drop-shadow(0 0 12px rgba(255, 255, 255, 0.4))
-        drop-shadow(0 0 25px rgba(216, 180, 254, 0.3))
-        drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.05));
-}
-
-@keyframes xatGlowStreak {
-    0% { background-position: 200% center; }
-    100% { background-position: -200% center; }
+    /* El efecto exacto de neón blanco encendido que rodea las letras */
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.9), 
+        0 0 25px rgba(255, 255, 255, 0.6), 
+        0 0 40px rgba(255, 255, 255, 0.3);
 }
 
 /* DIVISOR COQUETO CON CORAZÓN */
@@ -122,15 +86,15 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -20px;
+    margin-top: -15px;
     margin-bottom: 25px;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .xat-divider::before, .xat-divider::after {
     content: "";
     width: 90px;
-    height: 1px;
+    height: 1.5px;
     background: linear-gradient(to right, transparent, #ffffff 50%, transparent);
 }
 
@@ -141,7 +105,7 @@ body, html {
     position: relative;
     transform: rotate(45deg);
     margin: 0 12px;
-    box-shadow: 0 0 6px rgba(216, 180, 254, 1);
+    box-shadow: 0 0 8px #ffffff;
 }
 .xat-heart::before, .xat-heart::after {
     content: "";
@@ -154,15 +118,15 @@ body, html {
 .xat-heart::before { top: -3px; left: 0; }
 .xat-heart::after { top: 0; left: -3px; }
 
-/* REPRODUCTOR CRISTAL BLANCO ULTRA FINO */
+/* REPRODUCTOR CRISTAL BLANCO TRANSLÚCIDO */
 .reproductor-lindo {
-    background: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.65);
     padding: 10px 24px;
     border-radius: 25px;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 8px 24px rgba(168, 85, 247, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -172,23 +136,25 @@ body, html {
 }
 
 .reproductor-lindo:hover {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.6);
     transform: translateY(-2px);
 }
 
 .reproductor-lindo i {
-    color: #a855f7; /* Icono morado a juego */
+    color: #ffffff;
     font-size: 0.85rem;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
 .reproductor-lindo span {
-    color: #6b21a8;
+    color: #ffffff;
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-/* SISTEMA ANIMADO: LLUVIA DE PÉTALOS INTEGRADA */
+/* SISTEMA ANIMADO: LLUVIA DE PÉTALOS AJUSTADA */
 .lluvia-petalos {
     position: absolute;
     width: 100%;
@@ -201,11 +167,23 @@ body, html {
 
 .petalo {
     position: absolute;
-    background: linear-gradient(135deg, #fbcfe8, #f472b6); /* Pétalos rosa suave que contrastan hermoso */
     border-radius: 0 100% 40% 100%;
-    opacity: 0.7;
+    opacity: 0.75;
     top: -10%;
     animation: caerPetalo 15s linear infinite;
+
+    /* =========================================================================
+       OPCIONES DE PÉTALOS QUE COMBINAN CON EL FONDO (Descomenta la que prefieras)
+       ========================================================================= */
+    
+    /* OPCIÓN 1 (Activada): Degradado Orquídea Pastel y Lavanda (Femenino y dulce) */
+    background: linear-gradient(135deg, #f3d4e2, #ca8ca6);
+
+    /* OPCIÓN 2: Blanco Nácar Puro con Transparencia (Estilo pétalos de novia finos)
+    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,235,240,0.6)); */
+
+    /* OPCIÓN 3: Violeta Lila Pastel (Monocromático perfecto con el fondo)
+    background: linear-gradient(135deg, #e9d5ff, #c084fc); */
 }
 
 @keyframes caerPetalo {
@@ -214,25 +192,25 @@ body, html {
         transform: translateX(0) rotate(0deg);
         opacity: 0;
     }
-    10% { opacity: 0.75; }
-    90% { opacity: 0.75; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
     100% {
         top: 110%;
-        transform: translateX(150px) rotate(450deg);
+        transform: translateX(120px) rotate(360deg);
         opacity: 0;
     }
 }
 
-/* Configuración de velocidad, tamaño y posición aleatoria para los 12 pétalos */
-.p1  { left: 10%;  width: 12px; height: 16px; animation-delay: 0s;   animation-duration: 12s; }
-.p2  { left: 25%;  width: 16px; height: 22px; animation-delay: 2s;   animation-duration: 16s; }
-.p3  { left: 40%;  width: 10px; height: 14px; animation-delay: 4s;   animation-duration: 14s; }
-.p4  { left: 55%;  width: 14px; height: 19px; animation-delay: 1s;   animation-duration: 18s; }
-.p5  { left: 70%;  width: 18px; height: 24px; animation-delay: 6s;   animation-duration: 13s; }
-.p6  { left: 85%;  width: 12px; height: 17px; animation-delay: 3s;   animation-duration: 15s; }
-.p7  { left: 15%;  width: 15px; height: 20px; animation-delay: 7s;   animation-duration: 17s; }
-.p8  { left: 35%;  width: 11px; height: 15px; animation-delay: 9s;   animation-duration: 14s; }
-.p9  { left: 50%;  width: 17px; height: 23px; animation-delay: 5s;   animation-duration: 16s; }
-.p10 { left: 65%;  width: 13px; height: 18px; animation-delay: 11s;  animation-duration: 12s; }
-.p11 { left: 80%;  width: 16px; height: 22px; animation-delay: 8s;   animation-duration: 19s; }
-.p12 { left: 95%;  width: 10px; height: 14px; animation-delay: 10s;  animation-duration: 15s; }
+/* Configuración de los 12 pétalos */
+.p1  { left: 8%;   width: 13px; height: 17px; animation-delay: 0s;   animation-duration: 11s; }
+.p2  { left: 23%;  width: 16px; height: 21px; animation-delay: 2s;   animation-duration: 15s; }
+.p3  { left: 38%;  width: 11px; height: 15px; animation-delay: 4s;   animation-duration: 13s; }
+.p4  { left: 52%;  width: 14px; height: 19px; animation-delay: 1s;   animation-duration: 17s; }
+.p5  { left: 68%;  width: 17px; height: 23px; animation-delay: 5s;   animation-duration: 12s; }
+.p6  { left: 82%;  width: 12px; height: 16px; animation-delay: 3s;   animation-duration: 14s; }
+.p7  { left: 18%;  width: 15px; height: 20px; animation-delay: 6s;   animation-duration: 16s; }
+.p8  { left: 33%;  width: 10px; height: 14px; animation-delay: 8s;   animation-duration: 13s; }
+.p9  { left: 48%;  width: 18px; height: 24px; animation-delay: 4.5s; animation-duration: 15s; }
+.p10 { left: 63%;  width: 13px; height: 18px; animation-delay: 10s;  animation-duration: 11s; }
+.p11 { left: 78%;  width: 15px; height: 21px; animation-delay: 7s;   animation-duration: 18s; }
+.p12 { left: 92%;  width: 11px; height: 15px; animation-delay: 9s;   animation-duration: 14s; }
