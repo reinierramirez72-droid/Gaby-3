@@ -8,7 +8,7 @@ body, html {
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* CONTENEDOR PRINCIPAL: COLOR SÓLIDO VERDE OLIVA PASTEL (SIN DEGRADADO) */
+/* CONTENEDOR PRINCIPAL: COLOR SÓLIDO VERDE OLIVA INTENSO Y VERDOSO */
 .xat-space-escenario {
     position: fixed;
     top: 0;
@@ -16,8 +16,8 @@ body, html {
     width: 100%;
     height: 100%;
     
-    /* Color plano basado exactamente en el tono de tu referencia */
-    background-color: #b9c4b1;
+    /* Tono oliva real, profundo, natural y súper estético */
+    background-color: #607056; 
     
     display: flex;
     flex-direction: column;
@@ -26,7 +26,6 @@ body, html {
     overflow: hidden;
     z-index: 1;
     
-    /* Animación de entrada suave */
     animation: xatFadeInSpace 2.5s ease-out forwards;
     opacity: 0;
 }
@@ -34,6 +33,30 @@ body, html {
 @keyframes xatFadeInSpace {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+/* EFECTO REFORZADO: CAPA DE POLVO DE HADAS CHAMPAÑA MÁGICO */
+.xat-polvo-hadas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Múltiples niveles de profundidad para destellos finos de polvo mágico */
+    background-image: 
+        radial-gradient(rgba(255, 248, 220, 0.55) 1.5px, transparent 15px),
+        radial-gradient(rgba(253, 240, 195, 0.35) 2px, transparent 25px),
+        radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 35px);
+    background-size: 200px 200px, 320px 320px, 450px 450px;
+    background-position: 0 0, 40px 110px, 100px 250px;
+    z-index: 2;
+    pointer-events: none;
+    
+    /* Animación fluida de titileo místico */
+    animation: xatPolvoTitileo 6s ease-in-out infinite alternate;
+}
+
+@keyframes xatPolvoTitileo {
+    0% { opacity: 0.25; transform: scale(0.98); }
+    100% { opacity: 0.85; transform: scale(1.02); }
 }
 
 /* CONTENEDOR CENTRAL */
@@ -46,7 +69,7 @@ body, html {
     align-items: center;
 }
 
-/* GABY CON EL EFECTO AMARILLO NEÓN CHAMPAÑA DE LA FOTO */
+/* GABY EN AMARILLO NEÓN CHAMPAÑA */
 .texto-caligrafico-glow {
     font-family: 'Great Vibes', cursive, serif;
     font-size: 13rem;
@@ -56,11 +79,8 @@ body, html {
     line-height: 1.1;
     user-select: none;
     display: block;
-    
-    /* Letra base color crema ultra claro */
     color: #fffdf9;
     
-    /* Capas de neón: amarillo champaña y oro pastel encendido */
     text-shadow: 
         0 0 10px #fff7db, 
         0 0 20px rgba(253, 240, 195, 0.9), 
@@ -68,7 +88,7 @@ body, html {
         0 0 50px rgba(235, 212, 142, 0.3);
 }
 
-/* DIVISOR COQUETO CON CORAZÓN AMARILLO NEÓN */
+/* DIVISOR CON CORAZÓN */
 .xat-divider {
     display: flex;
     align-items: center;
@@ -95,17 +115,12 @@ body, html {
     box-shadow: 0 0 8px rgba(253, 240, 195, 0.9);
 }
 .xat-heart::before, .xat-heart::after {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background-color: #fffdf9;
-    border-radius: 50%;
-    position: absolute;
+    content: ""; width: 6px; height: 6px; background-color: #fffdf9; border-radius: 50%; position: absolute;
 }
 .xat-heart::before { top: -3px; left: 0; }
 .xat-heart::after { top: 0; left: -3px; }
 
-/* REPRODUCTOR ESTILO CRISTAL */
+/* REPRODUCTOR CRISTAL */
 .reproductor-lindo {
     background: rgba(255, 255, 255, 0.35);
     border: 1px solid rgba(255, 255, 255, 0.55);
@@ -122,24 +137,8 @@ body, html {
     transition: all 0.3s ease;
 }
 
-.reproductor-lindo:hover {
-    background: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-}
-
-.reproductor-lindo i {
-    color: #ffffff;
-    font-size: 0.85rem;
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
-}
-
-.reproductor-lindo span {
-    color: #ffffff;
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
-}
+.reproductor-lindo i { color: #ffffff; font-size: 0.85rem; text-shadow: 0 0 3px rgba(255, 255, 255, 0.5); }
+.reproductor-lindo span { color: #ffffff; font-size: 0.8rem; font-weight: 500; letter-spacing: 1px; text-shadow: 0 0 3px rgba(255, 255, 255, 0.3); }
 
 /* SISTEMA ANIMADO: PÉTALOS INTEGRADOS */
 .lluvia-petalos {
@@ -158,24 +157,15 @@ body, html {
     opacity: 0.8;
     top: -10%;
     animation: caerPetalo 15s linear infinite;
-    
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, #d4ded0 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, #c4cfbe 100%);
     box-shadow: inset 1px 1px 2px rgba(255,255,255,0.7), 0 2px 4px rgba(0, 0, 0, 0.01);
 }
 
 @keyframes caerPetalo {
-    0% {
-        top: -10%;
-        transform: translateX(0) rotate(0deg);
-        opacity: 0;
-    }
+    0% { top: -10%; transform: translateX(0) rotate(0deg); opacity: 0; }
     10% { opacity: 0.85; }
     90% { opacity: 0.85; }
-    100% {
-        top: 110%;
-        transform: translateX(120px) rotate(360deg);
-        opacity: 0;
-    }
+    100% { top: 110%; transform: translateX(120px) rotate(360deg); opacity: 0; }
 }
 
 /* Configuración de los 12 pétalos */
