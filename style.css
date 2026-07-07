@@ -8,7 +8,7 @@ body, html {
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* CONTENEDOR PRINCIPAL: VERDE SAGE / OLIVA PASTEL ONDEANTE LIMPIO */
+/* CONTENEDOR PRINCIPAL: COLOR SÓLIDO VERDE OLIVA PASTEL (SIN DEGRADADO) */
 .xat-space-escenario {
     position: fixed;
     top: 0;
@@ -16,15 +16,8 @@ body, html {
     width: 100%;
     height: 100%;
     
-    /* Paleta verde salvia suave y oliva mate de tu referencia, ahora 100% visible */
-    background: linear-gradient(135deg, 
-        #b2beaf 0%,   
-        #c3cebf 25%,  
-        #a3b19b 50%,  
-        #c3cebf 75%,  
-        #b2beaf 100%  
-    );
-    background-size: 400% 400%;
+    /* Color plano basado exactamente en el tono de tu referencia */
+    background-color: #b9c4b1;
     
     display: flex;
     flex-direction: column;
@@ -33,16 +26,9 @@ body, html {
     overflow: hidden;
     z-index: 1;
     
-    animation: 
-        xatFadeInSpace 2.5s ease-out forwards,
-        xatSageWave 14s ease-in-out infinite;
+    /* Animación de entrada suave */
+    animation: xatFadeInSpace 2.5s ease-out forwards;
     opacity: 0;
-}
-
-@keyframes xatSageWave {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 @keyframes xatFadeInSpace {
