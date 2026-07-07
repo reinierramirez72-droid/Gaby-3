@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espacio de Gaby</title>
+    <!-- Importamos Great Vibes para el nombre y Montserrat para el botón -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Iconos para el reproductor -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Vinculamos tu archivo CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="xat-space-escenario">
 
-        <div class="xat-polvo-hadas"></div>
+        <!-- SISTEMA DE BURBUJAS CON CORAZONES SVG REALES Y ESTILIZADOS -->
+        <div class="burbujas-corazon-contenedor">
+            <!-- Usamos SVG nativo para lograr la silueta perfecta de la imagen de referencia -->
+            <svg class="corazon-burbuja c1" viewBox="0 0 32 32"><path d="M16 28.5S2 18.2 2 10.5A6.5 6.5 0 0 1 15 7.5a6.5 6.5 0 0 1 13 0c0 7.7-14 18-14 18z"/></svg>
+            <svg class="corazon-burbuja c2" viewBox="0 0 32 32"><path d="M16 28.5S2 18.2 2 10.5A6.5 6.5 0 0 1 15 7.5a6.5 6.5 0 0 1 13 0c0 7.7-14 18-14 18z"/></svg>
+            <svg class="corazon-burbuja c3" viewBox="0 0 32 32"><path d="M16 28.5S2 18.2 2 10.5A6.5 6.5 0 0 1 15 7.5a6.5 6.5 0 0 1 13 0c0 7.7-14 18-14 18z"/></svg>
+            <svg class="corazon-burbuja c4" viewBox="0 0 32 32"><path d="M16 28.5S2 18.2 2 10.5A6.5 6.5 0 0 1 15 7.5a6.5 6.5 0 0 1 13 0c0 7.7-14 18-14 18z"/></svg>
+            <svg class="corazon-burbuja c5" viewBox="0 0 32 32"><path d="M16 28.5S2 18.2 2 10.5A6.5 6.5 0 0 1 15 7.5a6.5 6.5 0 0 1 13 0c0 7.7-14 18-14 18z"/></svg>
+            <svg class="corazon-burbuja c6" viewBox="0 0 32 32"><path d="M16 28.5S2 18.2 2 10.5A6.5 6.5 0 0 1 15 7.5a6.5 6.5 0 0 1 13 0c0 7.7-14 18-14 18z"/></svg>
+            <svg class="corazon-burbuja c7" viewBox="0 0 32 32"><path d="M16 28.5S2 18.2 2 10.5A6.5 6.5 0 0 1 15 7.5a6.5 6.5 0 0 1 13 0c0 7.7-14 18-14 18z"/></svg>
+            <svg class="corazon-burbuja c8" viewBox="0 0 32 32"><path d="M16 28.5S2 18.2 2 10.5A6.5 6.5 0 0 1 15 7.5a6.5 6.5 0 0 1 13 0c0 7.7-14 18-14 18z"/></svg>
+            <svg class="corazon-burbuja c9" viewBox="0 0 32 32"><path d="M16 28.5S2 18.2 2 10.5A6.5 6.5 0 0 1 15 7.5a6.5 6.5 0 0 1 13 0c0 7.7-14 18-14 18z"/></svg>
+            <svg class="corazon-burbuja c10" viewBox="0 0 32 32"><path d="M16 28.5S2 18.2 2 10.5A6.5 6.5 0 0 1 15 7.5a6.5 6.5 0 0 1 13 0c0 7.7-14 18-14 18z"/></svg>
+        </div>
 
+        <!-- LLUVIA DE PÉTALOS INTEGRADA -->
         <div class="lluvia-petalos">
             <div class="petalo p1"></div>
             <div class="petalo p2"></div>
@@ -31,6 +48,7 @@
             <div class="petalo p12"></div>
         </div>
 
+        <!-- BLOQUE CENTRAL -->
         <div class="contenedor-nombre">
             <h1 class="texto-caligrafico-glow">Gaby</h1>
             
@@ -38,6 +56,7 @@
                 <div class="xat-heart"></div>
             </div>
             
+            <!-- Reproductor estilo cristal -->
             <div class="reproductor-bajo-nombre">
                 <button id="btn-reproductor" class="reproductor-lindo">
                     <i id="icono-reproductor" class="fas fa-play"></i>
@@ -46,6 +65,7 @@
             </div>
         </div>
 
+        <!-- AUDIO NATIVO DESDE TU REPOSITORIO -->
         <audio id="musica-fondo" src="cancion.mp3" loop></audio>
 
     </div>
