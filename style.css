@@ -8,7 +8,7 @@ body, html {
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* CONTENEDOR PRINCIPAL: VERDE SAGE / OLIVA PASTEL ONDEANTE */
+/* CONTENEDOR PRINCIPAL: VERDE SAGE / OLIVA PASTEL ONDEANTE LIMPIO */
 .xat-space-escenario {
     position: fixed;
     top: 0;
@@ -16,7 +16,7 @@ body, html {
     width: 100%;
     height: 100%;
     
-    /* Basado exactamente en la paleta verde salvia suave y nubes de tu referencia */
+    /* Paleta verde salvia suave y oliva mate de tu referencia, ahora 100% visible */
     background: linear-gradient(135deg, 
         #b2beaf 0%,   
         #c3cebf 25%,  
@@ -37,25 +37,6 @@ body, html {
         xatFadeInSpace 2.5s ease-out forwards,
         xatSageWave 14s ease-in-out infinite;
     opacity: 0;
-}
-
-/* EFECTO AURORA CORE: HALO CHAMPAÑA CÁLIDO TIPO TU IMAGEN */
-.xat-space-escenario::before {
-    content: "";
-    position: absolute;
-    width: 160%;
-    height: 160%;
-    background: radial-gradient(circle at 50% 50%, rgba(251, 247, 235, 0.18) 0%, rgba(244, 241, 234, 0.04) 45%, transparent 85%);
-    z-index: 2;
-    pointer-events: none;
-    
-    opacity: 0.65;
-    animation: xatAuroraGlow 24s ease-in-out infinite alternate;
-}
-
-@keyframes xatAuroraGlow {
-    0% { transform: translate(-5%, -5%) rotate(0deg) scale(0.95); opacity: 0.4; }
-    100% { transform: translate(5%, 5%) rotate(8deg) scale(1.02); opacity: 0.75; }
 }
 
 @keyframes xatSageWave {
@@ -93,7 +74,7 @@ body, html {
     /* Letra base color crema ultra claro */
     color: #fffdf9;
     
-    /* CAPAS DE NEÓN: Combinación exacta de amarillo champaña y oro pastel encendido */
+    /* Capas de neón: amarillo champaña y oro pastel encendido */
     text-shadow: 
         0 0 10px #fff7db, 
         0 0 20px rgba(253, 240, 195, 0.9), 
@@ -115,7 +96,7 @@ body, html {
     content: "";
     width: 90px;
     height: 1.5px;
-    background: linear-gradient(to right, transparent, rgba(255, 251, 235, 0.6) 50%, transparent);
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6) 50%, transparent);
 }
 
 .xat-heart {
