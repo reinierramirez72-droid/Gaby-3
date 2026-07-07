@@ -8,17 +8,14 @@ body, html {
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
-/* CONTENEDOR PRINCIPAL: COLOR SÓLIDO VERDE OLIVA INTENSO Y VERDOSO */
+/* CONTENEDOR PRINCIPAL: COLOR SÓLIDO VERDE OLIVA INTENSO */
 .xat-space-escenario {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    
-    /* Tono oliva real, profundo, natural y súper estético */
-    background-color: #607056; 
-    
+    background-color: #607056; /* Verde oliva orgánico profundo */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,30 +30,6 @@ body, html {
 @keyframes xatFadeInSpace {
     0% { opacity: 0; }
     100% { opacity: 1; }
-}
-
-/* EFECTO REFORZADO: CAPA DE POLVO DE HADAS CHAMPAÑA MÁGICO */
-.xat-polvo-hadas {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* Múltiples niveles de profundidad para destellos finos de polvo mágico */
-    background-image: 
-        radial-gradient(rgba(255, 248, 220, 0.55) 1.5px, transparent 15px),
-        radial-gradient(rgba(253, 240, 195, 0.35) 2px, transparent 25px),
-        radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 35px);
-    background-size: 200px 200px, 320px 320px, 450px 450px;
-    background-position: 0 0, 40px 110px, 100px 250px;
-    z-index: 2;
-    pointer-events: none;
-    
-    /* Animación fluida de titileo místico */
-    animation: xatPolvoTitileo 6s ease-in-out infinite alternate;
-}
-
-@keyframes xatPolvoTitileo {
-    0% { opacity: 0.25; transform: scale(0.98); }
-    100% { opacity: 0.85; transform: scale(1.02); }
 }
 
 /* CONTENEDOR CENTRAL */
@@ -139,6 +112,72 @@ body, html {
 
 .reproductor-lindo i { color: #ffffff; font-size: 0.85rem; text-shadow: 0 0 3px rgba(255, 255, 255, 0.5); }
 .reproductor-lindo span { color: #ffffff; font-size: 0.8rem; font-weight: 500; letter-spacing: 1px; text-shadow: 0 0 3px rgba(255, 255, 255, 0.3); }
+
+/* =======================================================
+   NUEVO SISTEMA: CORAZONES BURBUJA SVG (REALES Y ORGANICOS)
+   ======================================================= */
+.burbujas-corazon-contenedor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.corazon-burbuja {
+    position: absolute;
+    bottom: -15%;
+    
+    /* Relleno translúcido cristalino champaña idéntico al neón de Gaby */
+    fill: rgba(253, 240, 195, 0.22);
+    /* Contorno fino y estilizado estilo burbuja */
+    stroke: rgba(255, 251, 235, 0.45);
+    stroke-width: 1px;
+    
+    /* Aura brillante que emula la referencia */
+    filter: drop-shadow(0 0 6px rgba(253, 240, 195, 0.25));
+    
+    animation: flotarCorazonReal 13s infinite ease-in-out;
+    opacity: 0;
+}
+
+/* Animación de física líquida: sube balanceándose suavemente en curvas */
+@keyframes flotarCorazonReal {
+    0% {
+        bottom: -15%;
+        transform: translateX(0) scale(0.6) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.75;
+    }
+    50% {
+        transform: translateX(50px) scale(1) rotate(8deg);
+    }
+    80% {
+        opacity: 0.6;
+    }
+    100% {
+        bottom: 115%;
+        transform: translateX(-25px) scale(0.85) rotate(-8deg);
+        opacity: 0;
+    }
+}
+
+/* Parámetros aleatorios de tamaño, velocidad y retardo para las 10 burbujas SVG */
+.c1  { left: 6%;   width: 24px; height: 24px; animation-delay: 0s;   animation-duration: 12s; }
+.c2  { left: 24%;  width: 38px; height: 38px; animation-delay: 3s;   animation-duration: 16s; fill: rgba(253, 240, 195, 0.15); }
+.c3  { left: 38%;  width: 18px; height: 18px; animation-delay: 7s;   animation-duration: 14s; }
+.c4  { left: 50%;  width: 30px; height: 30px; animation-delay: 1.5s; animation-duration: 18s; }
+.c5  { left: 63%;  width: 44px; height: 44px; animation-delay: 9s;   animation-duration: 15s; fill: rgba(253, 240, 195, 0.12); }
+.c6  { left: 76%;  width: 26px; height: 26px; animation-delay: 4.5s; animation-duration: 13s; }
+.c7  { left: 89%;  width: 34px; height: 34px; animation-delay: 11s;  animation-duration: 17s; }
+.c8  { left: 14%;  width: 22px; height: 22px; animation-delay: 13s;  animation-duration: 15s; }
+.c9  { left: 56%;  width: 28px; height: 28px; animation-delay: 5.5s; animation-duration: 14s; }
+.c10 { left: 82%;  width: 36px; height: 36px; animation-delay: 2.5s; animation-duration: 19s; fill: rgba(253, 240, 195, 0.18); }
 
 /* SISTEMA ANIMADO: PÉTALOS INTEGRADOS */
 .lluvia-petalos {
